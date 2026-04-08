@@ -10,3 +10,5 @@ Obtenha uma chave gratuita em [Groq Cloud](https://console.groq.com/home).
 No arquivo scripts.js, insira sua chave na variável chaveApi.
 
 Abra o index.html no seu navegador.
+
+[Link do Projeto Online](https://matheus-garcia-software.github.io/css-generator-ia/)
