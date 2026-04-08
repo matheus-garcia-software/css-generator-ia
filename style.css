@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #09090b; 
+    color: #e4e4e7; /*cor dos textos*/
+    padding: 40px;
+    display: flex; /* Mostra os itens - habilita super poderes*/
+    flex-direction: column;
+    align-items: center;
+}   
+
+h1 { 
+    font-size: 40px;
+    color: #fafafa;
+    font-weight: bold; /*bold = negrito*/
+
+}
+
+span {
+    color: #6922c5;
+}
+
+p { 
+    color: #71717a;
+    margin: 10px;
+}
+
+textarea {
+    resize: none; /*TROCAR O TAMANHO, aquele botão que puxa e abre mais a caixa*/
+    width: 100%; /*Largura*/
+    max-width: 640px;
+    padding: 16px;
+    border: 1px solid #27272a; /*Trocar a cor da borda*/
+    border-radius: 10px; /*Arrendondar a borda*/
+    background: #141419; 
+    color: #fafafa;
+    outline: none;
+    margin-top: 20px;
+}   
+
+button {
+    width: 100%;
+    max-width: 640px;
+    background: #6922c5;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 10px; /*Top - Margin apenas em cima, bottom (Baixo), right (direita), left (esquerda)*/
+}
+
+.blocoCodigoCss {
+    padding: 16px;
+    font-size: 14px;
+    color: #6c34d3;
+    line-height: 2; /*altura entre as linhas*/
+    overflow: auto;
+    white-space: pre-wrap;
+
+}
+
+.blocoCodigoCss, .resultadoCodigo {
+    width: 100%;  /*largura*/
+    height: 500px;  /*altura*/
+    min-height: 500px; 
+    background: #141419;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    margin: 0px; 
+}
+
+
+.box_Resultado {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container-item {
+    flex: 1; /* Faz as duas colunas terem o mesmo tamanho exato */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o H2 e a Caixa */
+}
+
+.container-item h2 {
+    margin: 15px 0px 0px 0px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #a1a1aa; /* Um tom de cinza mais suave */
+}
+
+/* Container pai */
+.posicao-relativa {
+    position: relative;
+    width: 100%;
+}
+
+/* Botão Redondo */
+.botaoCopiarCircular {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Faz ficar redondo */
+    background: #27272a;
+    border: 1px solid #3f3f46;
+    color: #e4e4e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.botaoCopiarCircular:hover {
+    background: #3f3f46;
+    transform: scale(1.1);
+}
+
+/* Estilo do Tooltip (Balão de texto) */
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 120px;
+    background-color: #f4f4f5; /* Cor clara como na sua imagem */
+    color: #18181b;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: -45px; /* Aparece embaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Mostrar o tooltip quando passar o mouse */
+.botaoCopiarCircular:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Efeito de clique (feedback visual) */
+.botaoCopiarCircular:active {
+    background: #6e22c5;
+    border-color: #6e22c5;
+}
+
+/* 1. Define a largura da barra de scroll */
+.blocoCodigoCss::-webkit-scrollbar {
+    width: 10px;               /* Largura do scroll vertical */
+    height: 10px;              /* Altura do scroll horizontal */
+}
+
+/* 2. O "Track" é o fundo (a pista) por onde o scroll corre */
+.blocoCodigoCss::-webkit-scrollbar-track {
+    background: #141419;       /* Cor de fundo igual à da caixa */
+    border-radius: 10px;
+}
+
+/* 3. O "Thumb" é a barrinha que a gente arrasta */
+.blocoCodigoCss::-webkit-scrollbar-thumb {
+    background: #6922c5;       /* Cor roxa igual ao seu botão */
+    border-radius: 10px;       /* Deixa as pontas arredondadas */
+    border: 2px solid #141419; /* Cria um espaçinho em volta da barra */
+}
+
+/* 4. Efeito quando passa o mouse na barrinha */
+.blocoCodigoCss::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;       /* Um roxo um pouco mais claro */
+}
+
+/* Configuração para Firefox */
+.blocoCodigoCss {
+    scrollbar-width: thin;
+    scrollbar-color: #6922c5 #141419;
+}

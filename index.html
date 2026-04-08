@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>CSS Gerador <span>com IA</span>⚡️</h1>
+    <p>Descreva o que você imagina e veja a mágica acontecer!</p>
+
+    <!--area de texto-->
+    <!--rows - linhas-->
+    <textarea rows="3" class="caixaTexto" placeholder="Ex: Bola azul pingando"></textarea>
+
+    <button class="botaoGerar">Gerar Codigo ⚡️</button>
+
+    <div class="box_Resultado">
+
+
+
+        <div class="container-item">
+            <h2>Código</h2>
+            <div class="posicao-relativa">
+                <p class="blocoCodigoCss">O código aparecerá aqui...</p>
+                <button class="botaoCopiarCircular" onclick="copiarCodigo()" aria-label="Copiar o código">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span class="tooltip-text">Copiar o código</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="container-item">
+            <h2>Preview</h2>
+            <iframe class="resultadoCodigo"></iframe>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="scripts.js"></script>
+
+</html>
